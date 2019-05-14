@@ -3,10 +3,11 @@ services:
   - docker
 
 before_install:
-  - docker build -t xuantong/docker-react -f dockerfile.dev .
+  - docker build -t xuantong/docker-react -f Dockerfile.dev .
 
 # run the tests
 script:
   - docker run xuantong/docker-react npm run test -- --coverage # the trailing --blah is used to have the test process retrun automatically
+
 
 
